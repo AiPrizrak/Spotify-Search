@@ -1,0 +1,22 @@
+@import '../../styles.sass'
+\:host
+    @include table_line(12px)
+    width: inherit
+.image
+    display: block
+    height: 20vw
+    min-width: 15.2vw
+    min-width: 15.2vw
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+.info_container
+    padding: 3vw 0 0 3vw
+
+@media (orientation: portrait)
+    \:host
+        flex-direction: column
+    .image
+        height: 52vw
+    input
+        width: 100%

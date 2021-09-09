@@ -1,0 +1,51 @@
+@import '../styles.sass'
+
+
+\:host
+
+    height: inherit
+    width: inherit
+    display: block
+    width: 76vw
+    margin: auto
+    overflow: hidden
+
+.results_container
+    display:block
+    height: 56vh
+    width: 76vw
+    background-color: lightgrey
+    border: solid 1px grey
+    color: darkgrey
+    border-radius: 0 0 5px 5px
+    overflow-y: auto
+    overflow-x: hidden
+    margin-top: 1vw
+
+.table_head
+    @include table_line($size: 14px)
+    border-radius: 5px 5px 0 0
+    border: solid 1px grey 
+    width: 14.8vw
+    justify-content: space-evenly
+
+.switch
+    @include table_line($size: 14px)
+    border-radius: 3px 3px 3px 3px
+    border: solid 1px grey 
+    width: 14.7vw
+.active
+    background-color: white
+    border-radius: 3px 3px 3px 3px
+.switch_button
+    width: 33%
+    text-align: center
+    height: 3vh
+    padding-top: 1.6vh
+
+@media (orientation: portrait)
+    .switch
+        width: 99.8%
+        margin-top: 1vh
+    input
+        width: 100%

@@ -1,0 +1,26 @@
+<app-search-bar></app-search-bar>
+<div  *ngIf="searchResults.length!=0">
+  <input
+  type="search" [(ngModel)]="filter_string">
+  <div class="switch">
+      <div class="switch_button" (click)="onChangeSortBy('track_name')"
+      [ngClass]="{'active': sortBy=='track_name'}"
+      >Name</div>
+      <div class="switch_button" (click)="onChangeSortBy('album')"
+      [ngClass]="{'active': sortBy=='album'}"
+      >Album</div>
+      <div class="switch_button" (click)="onChangeSortBy('artists')"
+      [ngClass]="{'active': sortBy=='artists'}"
+      >Artists</div>
+  </div>
+  <div class="results_container">
+    
+    <app-search-result
+    *ngFor="let item of searchResults | filterByTxtAllProps: filter_string | sortBy: sortBy"
+    [data]="item"
+    ></app-search-result>
+</div>
+
+  
+</div>
+

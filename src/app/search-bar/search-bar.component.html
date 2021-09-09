@@ -1,0 +1,8 @@
+<form action="">
+    <input type="search" [(ngModel)]="search_query"
+    name="search_input"
+    placeholder="Looking for something? Type it here"
+    pattern="/[^a-zA-Z0-9 ]/u"
+    >
+    <button type="submit" (click)="onClickSearch()">Search</button>
+</form>

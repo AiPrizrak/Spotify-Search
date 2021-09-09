@@ -1,0 +1,18 @@
+
+<div class="image"
+[ngStyle]="{'background-image': 'url(' + data.img_url + ')'}"></div>
+<div class="info_container">
+    <div>
+        Name: {{data.track_name}}
+    </div>
+    <div>
+        Album: {{data.album}}
+    </div>
+    <div>
+        Artist{{data.artists.includes(',')? 's':''}}: {{data.artists}}
+    </div>
+    <video controls name="media" *ngIf="data.track_url!=null">
+        <source [src]="data.track_url" type="audio/mpeg">
+    </video>
+</div>
+
